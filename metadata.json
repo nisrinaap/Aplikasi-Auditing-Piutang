@@ -1,0 +1,5 @@
+{
+  "name": "AuditGuard: AR Audit System",
+  "description": "A professional auditing tool for Accounts Receivable, featuring COA compliance checks, automated aging analysis, and AI-powered credit risk forecasting using Google Gemini.",
+  "requestFramePermissions": []
+}
