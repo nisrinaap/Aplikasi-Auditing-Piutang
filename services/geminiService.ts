@@ -2,6 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 import { Customer, Invoice, AgingBucket } from '../types';
 
 // Initialize Gemini Client
+// Using process.env.API_KEY which is defined in vite.config.ts
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 
 export const generateCreditRiskAnalysis = async (

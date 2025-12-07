@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo, useRef } from 'react';
 import { 
   LayoutDashboard, 
@@ -12,7 +11,6 @@ import {
   PieChart,
   Upload,
   RefreshCw,
-  Download,
   FileSpreadsheet,
   X,
   FileDown
@@ -328,7 +326,7 @@ export default function App() {
   // --- VIEWS ---
 
   const renderDashboard = () => (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <MetricCard 
           title="Total Receivables" 
@@ -362,7 +360,8 @@ export default function App() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm border border-slate-100">
           <h3 className="text-lg font-bold text-slate-800 mb-4">Aging Schedule Analysis</h3>
-          <div className="h-64">
+          {/* FIXED: Explicitly set height and width in style to prevent Recharts -1 error before Tailwind loads */}
+          <div style={{ width: '100%', height: '300px' }}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={agingData}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} />

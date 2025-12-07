@@ -1,8 +1,7 @@
-
 export interface Account {
   account_id: string;
   account_name: string;
-  account_type: 'Asset' | 'Liability' | 'Equity' | 'Revenue' | 'Expense';
+  account_type: 'Asset' | 'Liability' | 'Equity' | 'Revenue' | 'Expense' | string;
 }
 
 export interface Customer {
@@ -20,7 +19,7 @@ export interface Invoice {
   original_amount: number;
   amount_paid: number;
   balance_due: number;
-  status: 'Open' | 'Paid' | 'Void';
+  status: 'Open' | 'Paid' | 'Void' | string;
 }
 
 export interface Transaction {
